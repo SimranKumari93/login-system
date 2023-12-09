@@ -17,9 +17,7 @@
 
 3. **Activate the virtual environment:**
 
-    ```bash
-    $ source venv/bin/activate
-    ```
+    In VS Code type ctrl + Shift + P and Select Interpreter the select the one with '.\venv\Scripts\python.exe'. Restart the vscode terminal.
 
    Note: The `(venv)` in front of the prompt indicates that the virtual environment is active.
 
