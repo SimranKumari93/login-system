@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.html">
 </head>
 <body>
-    <Center><h1>Welcome to login</h1></Center>
+    <center><h1>Welcome to login</h1></center>
     <form method="POST" autocomplete="off">
         {% csrf_token %}
 
         {{loginform.as_p}}
 
         <input type="submit" value="Login">
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit">
     </form>
+    <div>
+        {% for message in message %}
+        <h3>{{messages}}</h3>
+        {% endfor %}
+    </div>
 </body>
 </html>
