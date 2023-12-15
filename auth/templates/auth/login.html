@@ -8,18 +8,20 @@
 </head>
 <body>
     <center><h1>Welcome to login</h1></center>
-    <form method="POST" autocomplete="off">
+    <form method="POST" autocomplete="off" action="login">
         {% csrf_token %}
 
-        {{loginform.as_p}}
+        <!-- {{loginform.as_p}} -->
+        <p>Username:</p>
+        <input type="text" name="username" placeholder="username"><br>
+        <p>Password:</p>
+        <input type="password" name="password" placeholder="password"><br>
 
         <input type="submit" value="Login">
-        <input type="text" name="username" placeholder="username"><br>
-        <input type="password" name="password" placeholder="password"><br>
         <input type="submit">
     </form>
     <div>
-        {% for message in message %}
+        {% for messages in messages %}
         <h3>{{messages}}</h3>
         {% endfor %}
     </div>
